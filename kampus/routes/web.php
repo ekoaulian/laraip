@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Dosen
+Route::get('/dosen','DosenController@index');
+Route::get('/dosen/tambah','DosenController@tambah');
+Route::post('/dosen/store','DosenController@store');
+Route::get('/dosen/edit/{id}','DosenController@edit');
+Route::post('/dosen/update','DosenController@update');
+Route::get('/dosen/hapus/{id}','DosenController@hapus');

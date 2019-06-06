@@ -87,7 +87,7 @@
                 <div class="links">
                     <a href="#">Simple Crud -></a>
                     <a href="#">Mahasiswa</a>
-                    <a href="#">Dosen</a>|
+                    <a href="http://localhost/laraip/dosen">Dosen</a>|
                     <a href="#"> Login -></a>
                     <a href="#">Login</a>
                 </div>
