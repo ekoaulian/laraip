@@ -13,6 +13,8 @@
     <h3>
         Data Dosen
     </h3>
+    <a href="{{route('logout')}}">Logout</a><br/><br/>
+    ------<br/>
     <a href="/laraip/dosen/tambah">Tambah dosen</a><br/><br/>
     <table border="2">
         <tr>

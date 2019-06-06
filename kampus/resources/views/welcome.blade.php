@@ -45,7 +45,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 55px;
             }
 
             .links > a {
@@ -59,7 +59,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
         </style>
     </head>
@@ -85,11 +85,11 @@
                 </div>
     
                 <div class="links">
-                    <a href="#">Simple Crud -></a>
-                    <a href="#">Mahasiswa</a>
-                    <a href="http://localhost/laraip/dosen">Dosen</a>|
-                    <a href="#"> Login -></a>
-                    <a href="#">Login</a>
+                    <label>Simple Crud -></label>
+                    <a href="http://localhost/laraip/mahasiswa">Mahasiswa</a>
+                    <a href="http://localhost/laraip/dosen">Dosen</a> |
+                    <label>| Login -></label>
+                    <a href="http://localhost/laraip/login">Login</a>
                 </div>
             </div>
         </div>
