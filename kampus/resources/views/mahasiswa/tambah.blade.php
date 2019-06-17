@@ -15,7 +15,7 @@
     <a href="/laraip/mahasiswa">Kembali</a>
     <br/>
     <br/>
-    <form action="/laraip/mahasiswa/store" method="post">
+    <form action="/laraip/mahasiswa/store" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
     Npm <br/>
     <input type="text" name="mhs_npm" required="required" placeholder="Npm"><br>
@@ -28,7 +28,7 @@
     No Handphone <br/>
     <input type="text" name="mhs_nohp" required="required" placeholder="No Handphone"><br>
     Foto <br/>
-    <input type="file" name="mhs_foto" required="required" placeholder="foto"><br>
+    <input type="file" name="mhs_foto" required="required" placeholder="foto" accept="image/*"><br>
     Alamat <br/>
     <textarea name="mhs_alamat" required="required" placeholder="Alamat lengkap"></textarea><br>
     <input type="submit" value="Simpan">

@@ -22,14 +22,19 @@ class MahasiswaController extends Controller
     }
 
     public function store(Request $request) {
-    // input data ke table dosen 'dosen_nama' = field di database dosen_nama = name dr tambah.blade.php
+    // input data ke table mahasiswa 'mahasiswa_nama' = field di database mhs_nama = name dr tambah.blade.php    
+    $file = $request->file('mhs_foto');
+    $path = 'fotomhs/';
+    $foto = $request->mhs_nama.'.'.$file->getClientOriginalExtension();
+    
+    $file->move($path, $foto);
     DB::table('mahasiswa')->insert([
     	'mahasiswa_npm' => $request->mhs_npm,
         'mahasiswa_nama' => $request->mhs_nama,
         'mahasiswa_jurusan' => $request->mhs_jurusan,
         'mahasiswa_email' => $request->mhs_email,
         'mahasiswa_nohp' => $request->mhs_nohp,
-        'mahasiswa_foto' => $request->mhs_foto,
+        'mahasiswa_foto' => $foto,
         'mahasiswa_alamat' => $request->mhs_alamat
         
     ]);
@@ -47,13 +52,18 @@ class MahasiswaController extends Controller
 
     public function update(Request $request) {
     // update data mahasiswa
+    $file = $request->file('mhs_foto');
+    $path = 'fotomhs/';
+    $foto = $request->mhs_nama.'.'.$file->getClientOriginalExtension();
+    
+    $file->move($path, $foto);
     DB::table('mahasiswa')->where('mahasiswa_id',$request->id)->update([
         'mahasiswa_npm' => $request->mhs_npm,
         'mahasiswa_nama' => $request->mhs_nama,
         'mahasiswa_jurusan' => $request->mhs_jurusan,
         'mahasiswa_email' => $request->mhs_email,
         'mahasiswa_nohp' => $request->mhs_nohp,
-        'mahasiswa_foto' => $request->mhs_foto,
+        'mahasiswa_foto' => $foto,
         'mahasiswa_alamat' => $request->mhs_alamat
     ]);
     // setelah proses selesai alihkan ke halaman mahasiswa
@@ -67,5 +77,10 @@ class MahasiswaController extends Controller
     // setelah proses selesai alihkan ke halaman mahasiswa
     return redirect('/mahasiswa');
     }
+
+    /*function angka()
+    {
+        return 9000000;
+    }*/
 
 }

@@ -14,7 +14,7 @@
     </h3>
     <a href="/laraip/mahasiswa"> Kembali</a>
     @foreach($mahasiswa as $mhs)
-    <form action="/laraip/mahasiswa/update" method="post">
+    <form action="/laraip/mahasiswa/update" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
 
         <input type="hidden" name="id" value="{{ $mhs->mahasiswa_id }}"> <br/>
@@ -29,7 +29,7 @@
         No Handphone <br/>
         <input type="text" required="required" name="mhs_nohp" value="{{ $mhs->mahasiswa_nohp }}"> <br/>
         Foto<br/>
-        <input type="text" required="required" name="mhs_foto" value="{{ $mhs->mahasiswa_foto }}"> <br/>
+        <input type="file" required="required" name="mhs_foto" value="{{ $mhs->mahasiswa_foto }}" accept="image/*"> <br/>
         Alamat <br/>
         <textarea required="required" name="mhs_alamat">{{ $mhs->mahasiswa_alamat }}</textarea> <br/>
         <input type="submit" value="Update Data">

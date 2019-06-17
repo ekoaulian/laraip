@@ -37,7 +37,7 @@
             <td>{{ $mhs->mahasiswa_jurusan }}</td>
             <td>{{ $mhs->mahasiswa_email }}</td>
             <td>{{ $mhs->mahasiswa_nohp }}</td>
-            <td>{{ $mhs->mahasiswa_foto }}</td>
+            <td><img src="{{ asset('fotomhs/'.$mhs->mahasiswa_foto) }}" height="70"></td>
             <td>{{ $mhs->mahasiswa_alamat }}</td>
             <td>
                 <a href="/laraip/mahasiswa/edit/{{ $mhs->mahasiswa_id }}">Edit</a> |

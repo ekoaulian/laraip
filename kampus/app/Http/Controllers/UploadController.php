@@ -25,7 +25,7 @@ class UploadController extends Controller
  
 		$nama_file = time()."_".$file->getClientOriginalName();
  
-      	        // isi dengan nama folder tempat kemana file diupload
+      	// isi dengan nama folder tempat kemana file diupload
 		$tujuan_upload = 'img';
 		$file->move($tujuan_upload,$nama_file);
  

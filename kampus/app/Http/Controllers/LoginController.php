@@ -15,6 +15,8 @@ class LoginController extends Controller
 
 	public function login(Request $request)
     {
+        // $mahasiswa = new MahasiswaController();
+        //$mahasiswa->angka();
         if(Users::where(['email'=>$request->email, 'password'=>$request->password])->count() < 1)
         {
             return redirect()->route('get.login');

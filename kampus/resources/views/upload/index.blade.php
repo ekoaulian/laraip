@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="container">
  
-			<h2 class="text-center my-5">Test Upload</h2>
+			<h2 class="text-center my-5">Upload</h2>
 			<div class="links">
                     <label>Data Upload -></label>
                     <a href="http://localhost/laraip/upload/data">Lihat Data</a>
